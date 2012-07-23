@@ -1,0 +1,383 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9338726415BB550B00D12261 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9338726315BB550B00D12261 /* Cocoa.framework */; };
+		9338726E15BB550B00D12261 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9338726C15BB550B00D12261 /* InfoPlist.strings */; };
+		9338727015BB550B00D12261 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9338726F15BB550B00D12261 /* main.m */; };
+		9338727415BB550B00D12261 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 9338727215BB550B00D12261 /* Credits.rtf */; };
+		9338727715BB550B00D12261 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9338727615BB550B00D12261 /* AppDelegate.m */; };
+		9338727A15BB550B00D12261 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9338727815BB550B00D12261 /* MainMenu.xib */; };
+		9338728115BB587A00D12261 /* DiskArbitration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9338728015BB587A00D12261 /* DiskArbitration.framework */; };
+		9338728315BB588200D12261 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9338728215BB588200D12261 /* IOKit.framework */; };
+		9338728615BB6F6000D12261 /* DiskSizeFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9338728515BB6F6000D12261 /* DiskSizeFormatter.m */; };
+		933872B115BB8C2C00D12261 /* DriveSelectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 933872AF15BB8C2C00D12261 /* DriveSelectorViewController.m */; };
+		933872B215BB8C2C00D12261 /* DriveSelectorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 933872B015BB8C2C00D12261 /* DriveSelectorViewController.xib */; };
+		933872B615BB90B500D12261 /* ImageSelectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 933872B415BB90B500D12261 /* ImageSelectorViewController.m */; };
+		933872B715BB90B500D12261 /* ImageSelectorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 933872B515BB90B500D12261 /* ImageSelectorViewController.xib */; };
+		933872BA15BB932100D12261 /* NavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 933872B915BB932000D12261 /* NavigationViewController.m */; };
+		933872BC15BB9C3A00D12261 /* downArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 933872BB15BB9C3A00D12261 /* downArrow.png */; };
+		933872BF15BB9DBA00D12261 /* DiskImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 933872BE15BB9DBA00D12261 /* DiskImageView.m */; };
+		933872C215BBA5DB00D12261 /* DiskUtilController.m in Sources */ = {isa = PBXBuildFile; fileRef = 933872C115BBA5DB00D12261 /* DiskUtilController.m */; };
+		933872C415BC72FA00D12261 /* AppIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 933872C315BC72F900D12261 /* AppIcon.icns */; };
+		933872D815BC952600D12261 /* WriteCompleteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 933872D615BC952600D12261 /* WriteCompleteViewController.m */; };
+		933872D915BC952600D12261 /* WriteCompleteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 933872D715BC952600D12261 /* WriteCompleteViewController.xib */; };
+		933872DB15BC974B00D12261 /* SuccessIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 933872DA15BC974B00D12261 /* SuccessIcon.icns */; };
+		933872DD15BCB52A00D12261 /* iwriter in Resources */ = {isa = PBXBuildFile; fileRef = 933872DC15BCB52A00D12261 /* iwriter */; };
+		933872E015BCB60500D12261 /* BLAuthentication.m in Sources */ = {isa = PBXBuildFile; fileRef = 933872DF15BCB5E800D12261 /* BLAuthentication.m */; };
+		933872E215BCB72E00D12261 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 933872E115BCB72E00D12261 /* Security.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		9338725F15BB550B00D12261 /* RaspberryPiSDWriter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RaspberryPiSDWriter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9338726315BB550B00D12261 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		9338726615BB550B00D12261 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		9338726715BB550B00D12261 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		9338726815BB550B00D12261 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		9338726B15BB550B00D12261 /* RaspberryPiSDWriter-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RaspberryPiSDWriter-Info.plist"; sourceTree = "<group>"; };
+		9338726D15BB550B00D12261 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9338726F15BB550B00D12261 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9338727115BB550B00D12261 /* RaspberryPiSDWriter-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RaspberryPiSDWriter-Prefix.pch"; sourceTree = "<group>"; };
+		9338727315BB550B00D12261 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		9338727515BB550B00D12261 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		9338727615BB550B00D12261 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		9338727915BB550B00D12261 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		9338728015BB587A00D12261 /* DiskArbitration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DiskArbitration.framework; path = System/Library/Frameworks/DiskArbitration.framework; sourceTree = SDKROOT; };
+		9338728215BB588200D12261 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		9338728415BB6F6000D12261 /* DiskSizeFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiskSizeFormatter.h; sourceTree = "<group>"; };
+		9338728515BB6F6000D12261 /* DiskSizeFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiskSizeFormatter.m; sourceTree = "<group>"; };
+		933872AE15BB8C2C00D12261 /* DriveSelectorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DriveSelectorViewController.h; sourceTree = "<group>"; };
+		933872AF15BB8C2C00D12261 /* DriveSelectorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DriveSelectorViewController.m; sourceTree = "<group>"; };
+		933872B015BB8C2C00D12261 /* DriveSelectorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DriveSelectorViewController.xib; sourceTree = "<group>"; };
+		933872B315BB90B500D12261 /* ImageSelectorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageSelectorViewController.h; sourceTree = "<group>"; };
+		933872B415BB90B500D12261 /* ImageSelectorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageSelectorViewController.m; sourceTree = "<group>"; };
+		933872B515BB90B500D12261 /* ImageSelectorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageSelectorViewController.xib; sourceTree = "<group>"; };
+		933872B815BB932000D12261 /* NavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationViewController.h; sourceTree = "<group>"; };
+		933872B915BB932000D12261 /* NavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationViewController.m; sourceTree = "<group>"; };
+		933872BB15BB9C3A00D12261 /* downArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = downArrow.png; sourceTree = "<group>"; };
+		933872BD15BB9DBA00D12261 /* DiskImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiskImageView.h; sourceTree = "<group>"; };
+		933872BE15BB9DBA00D12261 /* DiskImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiskImageView.m; sourceTree = "<group>"; };
+		933872C015BBA5DB00D12261 /* DiskUtilController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiskUtilController.h; sourceTree = "<group>"; };
+		933872C115BBA5DB00D12261 /* DiskUtilController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiskUtilController.m; sourceTree = "<group>"; };
+		933872C315BC72F900D12261 /* AppIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = AppIcon.icns; sourceTree = "<group>"; };
+		933872D515BC952600D12261 /* WriteCompleteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WriteCompleteViewController.h; sourceTree = "<group>"; };
+		933872D615BC952600D12261 /* WriteCompleteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WriteCompleteViewController.m; sourceTree = "<group>"; };
+		933872D715BC952600D12261 /* WriteCompleteViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WriteCompleteViewController.xib; sourceTree = "<group>"; };
+		933872DA15BC974B00D12261 /* SuccessIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = SuccessIcon.icns; sourceTree = "<group>"; };
+		933872DC15BCB52A00D12261 /* iwriter */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = iwriter; path = iwriter/iwriter; sourceTree = "<group>"; };
+		933872DE15BCB5E700D12261 /* BLAuthentication.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BLAuthentication.h; sourceTree = "<group>"; };
+		933872DF15BCB5E800D12261 /* BLAuthentication.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BLAuthentication.m; sourceTree = "<group>"; };
+		933872E115BCB72E00D12261 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9338725C15BB550B00D12261 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				933872E215BCB72E00D12261 /* Security.framework in Frameworks */,
+				9338728315BB588200D12261 /* IOKit.framework in Frameworks */,
+				9338728115BB587A00D12261 /* DiskArbitration.framework in Frameworks */,
+				9338726415BB550B00D12261 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9338725415BB550A00D12261 = {
+			isa = PBXGroup;
+			children = (
+				933872E115BCB72E00D12261 /* Security.framework */,
+				933872C315BC72F900D12261 /* AppIcon.icns */,
+				9338728215BB588200D12261 /* IOKit.framework */,
+				9338728015BB587A00D12261 /* DiskArbitration.framework */,
+				9338726915BB550B00D12261 /* RaspberryPiSDWriter */,
+				9338726215BB550B00D12261 /* Frameworks */,
+				9338726015BB550B00D12261 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9338726015BB550B00D12261 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9338725F15BB550B00D12261 /* RaspberryPiSDWriter.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9338726215BB550B00D12261 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9338726315BB550B00D12261 /* Cocoa.framework */,
+				9338726515BB550B00D12261 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9338726515BB550B00D12261 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9338726615BB550B00D12261 /* AppKit.framework */,
+				9338726715BB550B00D12261 /* CoreData.framework */,
+				9338726815BB550B00D12261 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		9338726915BB550B00D12261 /* RaspberryPiSDWriter */ = {
+			isa = PBXGroup;
+			children = (
+				9338727515BB550B00D12261 /* AppDelegate.h */,
+				9338727615BB550B00D12261 /* AppDelegate.m */,
+				933872B815BB932000D12261 /* NavigationViewController.h */,
+				933872B915BB932000D12261 /* NavigationViewController.m */,
+				9338727815BB550B00D12261 /* MainMenu.xib */,
+				9338726A15BB550B00D12261 /* Supporting Files */,
+				9338728415BB6F6000D12261 /* DiskSizeFormatter.h */,
+				9338728515BB6F6000D12261 /* DiskSizeFormatter.m */,
+				933872AE15BB8C2C00D12261 /* DriveSelectorViewController.h */,
+				933872AF15BB8C2C00D12261 /* DriveSelectorViewController.m */,
+				933872B015BB8C2C00D12261 /* DriveSelectorViewController.xib */,
+				933872B315BB90B500D12261 /* ImageSelectorViewController.h */,
+				933872B415BB90B500D12261 /* ImageSelectorViewController.m */,
+				933872B515BB90B500D12261 /* ImageSelectorViewController.xib */,
+				933872BD15BB9DBA00D12261 /* DiskImageView.h */,
+				933872BE15BB9DBA00D12261 /* DiskImageView.m */,
+				933872C015BBA5DB00D12261 /* DiskUtilController.h */,
+				933872C115BBA5DB00D12261 /* DiskUtilController.m */,
+				933872D515BC952600D12261 /* WriteCompleteViewController.h */,
+				933872D615BC952600D12261 /* WriteCompleteViewController.m */,
+				933872D715BC952600D12261 /* WriteCompleteViewController.xib */,
+				933872DE15BCB5E700D12261 /* BLAuthentication.h */,
+				933872DF15BCB5E800D12261 /* BLAuthentication.m */,
+			);
+			path = RaspberryPiSDWriter;
+			sourceTree = "<group>";
+		};
+		9338726A15BB550B00D12261 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				933872DC15BCB52A00D12261 /* iwriter */,
+				933872DA15BC974B00D12261 /* SuccessIcon.icns */,
+				933872BB15BB9C3A00D12261 /* downArrow.png */,
+				9338726B15BB550B00D12261 /* RaspberryPiSDWriter-Info.plist */,
+				9338726C15BB550B00D12261 /* InfoPlist.strings */,
+				9338726F15BB550B00D12261 /* main.m */,
+				9338727115BB550B00D12261 /* RaspberryPiSDWriter-Prefix.pch */,
+				9338727215BB550B00D12261 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9338725E15BB550B00D12261 /* ImageWriter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9338727D15BB550B00D12261 /* Build configuration list for PBXNativeTarget "ImageWriter" */;
+			buildPhases = (
+				9338725B15BB550B00D12261 /* Sources */,
+				9338725C15BB550B00D12261 /* Frameworks */,
+				9338725D15BB550B00D12261 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ImageWriter;
+			productName = RaspberryPiSDWriter;
+			productReference = 9338725F15BB550B00D12261 /* RaspberryPiSDWriter.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9338725615BB550A00D12261 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = 9338725915BB550A00D12261 /* Build configuration list for PBXProject "RaspberryPiSDWriter" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 9338725415BB550A00D12261;
+			productRefGroup = 9338726015BB550B00D12261 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9338725E15BB550B00D12261 /* ImageWriter */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9338725D15BB550B00D12261 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9338726E15BB550B00D12261 /* InfoPlist.strings in Resources */,
+				9338727415BB550B00D12261 /* Credits.rtf in Resources */,
+				9338727A15BB550B00D12261 /* MainMenu.xib in Resources */,
+				933872B215BB8C2C00D12261 /* DriveSelectorViewController.xib in Resources */,
+				933872B715BB90B500D12261 /* ImageSelectorViewController.xib in Resources */,
+				933872BC15BB9C3A00D12261 /* downArrow.png in Resources */,
+				933872C415BC72FA00D12261 /* AppIcon.icns in Resources */,
+				933872D915BC952600D12261 /* WriteCompleteViewController.xib in Resources */,
+				933872DB15BC974B00D12261 /* SuccessIcon.icns in Resources */,
+				933872DD15BCB52A00D12261 /* iwriter in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9338725B15BB550B00D12261 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9338727015BB550B00D12261 /* main.m in Sources */,
+				9338727715BB550B00D12261 /* AppDelegate.m in Sources */,
+				9338728615BB6F6000D12261 /* DiskSizeFormatter.m in Sources */,
+				933872B115BB8C2C00D12261 /* DriveSelectorViewController.m in Sources */,
+				933872B615BB90B500D12261 /* ImageSelectorViewController.m in Sources */,
+				933872BA15BB932100D12261 /* NavigationViewController.m in Sources */,
+				933872BF15BB9DBA00D12261 /* DiskImageView.m in Sources */,
+				933872C215BBA5DB00D12261 /* DiskUtilController.m in Sources */,
+				933872D815BC952600D12261 /* WriteCompleteViewController.m in Sources */,
+				933872E015BCB60500D12261 /* BLAuthentication.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		9338726C15BB550B00D12261 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9338726D15BB550B00D12261 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		9338727215BB550B00D12261 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9338727315BB550B00D12261 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		9338727815BB550B00D12261 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9338727915BB550B00D12261 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9338727B15BB550B00D12261 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		9338727C15BB550B00D12261 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		9338727E15BB550B00D12261 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RaspberryPiSDWriter/RaspberryPiSDWriter-Prefix.pch";
+				INFOPLIST_FILE = "RaspberryPiSDWriter/RaspberryPiSDWriter-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		9338727F15BB550B00D12261 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RaspberryPiSDWriter/RaspberryPiSDWriter-Prefix.pch";
+				INFOPLIST_FILE = "RaspberryPiSDWriter/RaspberryPiSDWriter-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9338725915BB550A00D12261 /* Build configuration list for PBXProject "RaspberryPiSDWriter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9338727B15BB550B00D12261 /* Debug */,
+				9338727C15BB550B00D12261 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9338727D15BB550B00D12261 /* Build configuration list for PBXNativeTarget "ImageWriter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9338727E15BB550B00D12261 /* Debug */,
+				9338727F15BB550B00D12261 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9338725615BB550A00D12261 /* Project object */;
+}
