@@ -44,16 +44,18 @@
 	_targetImageView.image = [_targetDiskInfo valueForKey:@"icon"];
 	_sourceImageView.updateBlock = ^{
 		_sourceLabel.stringValue = [_sourceImageView.filePath lastPathComponent];
+		_nextButton.enabled = TRUE;
 	};
 	NSString *rawDiskName = [[self diskUtilController] rawDiskName:_targetDiskInfo];
 	NSString *mediaName = [_targetDiskInfo valueForKey:(NSString *)kDADiskDescriptionMediaNameKey];
 	_targetLabel.stringValue = [NSString stringWithFormat:@"%@ (%@)", mediaName, rawDiskName];
 	_progressIndicator.hidden = TRUE;
+	_nextButton.enabled = FALSE;
 }
 
 - (void)performWrite {
-#if 0
-//	NSString *rawDiskName = [[self diskUtilController] rawDiskName:_targetDiskInfo];
+#if 1
+	NSString *rawDiskName = [[self diskUtilController] rawDiskName:_targetDiskInfo];
 #else
 	NSString *rawDiskName = @"/Users/grant/Downloads/RasPiWrite/test.bin";
 #endif
@@ -68,6 +70,14 @@
 	[[BLAuthentication sharedInstance] authenticate:iwriterPath];
 	
 	NSFileHandle *fh = [[BLAuthentication sharedInstance] executeCommandAsync:iwriterPath withArgs:[NSArray arrayWithObjects:_sourceImageView.filePath, rawDiskName, nil]];
+
+	if(!fh ) {
+		// user didn't authorize or something else happened.
+		_progressIndicator.hidden = TRUE;
+		_nextButton.enabled = TRUE;
+		_prevButton.enabled = TRUE;
+		return;
+	}
 	
 	[[NSNotificationCenter defaultCenter] addObserver:self 
 											 selector:@selector(getData:) 
@@ -81,7 +91,6 @@
 	NSData *d = [[note userInfo] valueForKey:NSFileHandleNotificationDataItem];
 	if( [d length] == 0 ) {
 		_progressIndicator.indeterminate = TRUE;
-//		_nextButton.enabled = TRUE;
 
 		[[self diskUtilController] ejectDisk:_targetDiskInfo onComplete:^{
 			_writeResultViewController = [[WriteCompleteViewController alloc] initWithNibName:@"WriteCompleteViewController" bundle:nil];
@@ -107,6 +116,18 @@
 - (IBAction)next:(id)sender {
 	_nextButton.enabled = FALSE;
 	_prevButton.enabled = FALSE;
+	_sourceImageView.enabled = FALSE;
+	NSString *targetDeviceName = [_targetDiskInfo valueForKey:(NSString *)kDADiskDescriptionMediaNameKey];
+	
+	NSAlert *alert = [NSAlert alertWithMessageText:@"Confirm and Verify Action" defaultButton:@"Cancel" alternateButton:@"Continue" otherButton:nil informativeTextWithFormat:@"This program will write the source image \"%@\" to destination device \"%@\". Confirm this action is correct by selecting Continue.", _sourceImageView.filePath, targetDeviceName,nil];
+	int selection = [alert runModal];	
+	NSLog(@"selection = %d", selection );
+	if( selection != 0 ) {
+		NSLog(@"failure to confirm.");
+		_nextButton.enabled = TRUE;
+		_prevButton.enabled = TRUE;
+		return;
+	}
 	
 	uint64_t target_sz = [[_targetDiskInfo valueForKey:(NSString *)kDADiskDescriptionMediaSizeKey] unsignedLongLongValue];
 	NSLog(@"target_sz = %llu", target_sz );
@@ -125,7 +146,6 @@
 	NSLog(@"source_sz = %llu", source_sz );
 
 	if( source_sz > target_sz ) {
-		NSString *targetDeviceName = [_targetDiskInfo valueForKey:(NSString *)kDADiskDescriptionMediaNameKey];
 		NSAlert *alert = [NSAlert alertWithMessageText:@"Source image is too large for destination device" defaultButton:@"Ok" alternateButton:nil otherButton:nil informativeTextWithFormat:@"Source image \"%@\" is too large for destination device \"%@\"", _sourceImageView.filePath, targetDeviceName,nil];
 		[alert runModal];	
 		_nextButton.enabled = TRUE;

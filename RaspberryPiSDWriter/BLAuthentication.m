@@ -397,28 +397,7 @@
 	}
 	else {
 		int fd = fileno(f);
-		NSLog(@"fd is %d", fd);
 		return [[NSFileHandle alloc] initWithFileDescriptor:fd];
-		
-#if 0
-		int bytesRead;
-		if (f) {
-			NSLog(@"Reading pipe");
-            for (;;) {
-                bytesRead = fread(buffer, 1, 1024, f);
-                if (bytesRead < 1) break;
-				NSLog([NSString stringWithCString:buffer length:bytesRead]);
-            }
-			fflush(f);
-			fclose(f);
-		}
-		if (_delegate)
-		{
-			[_delegate authenticationDidExecute:self];
-		}
-		return YES;
-#endif
-		
 	}
 }
 
