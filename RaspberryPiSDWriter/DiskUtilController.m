@@ -27,7 +27,13 @@ static void UnmountCallback( DADiskRef disk, DADissenterRef dissenter, void * co
 	DiskUtilController *ad = (__bridge DiskUtilController *)context;
 	[ad unmountComplete];
 }
-
+static void EjectCallback( DADiskRef disk, DADissenterRef dissenter, void * context ) {
+	if( dissenter ) {
+		NSLog(@"EjectCallback dissenter: %@", DADissenterGetStatusString(dissenter) );
+	}
+	DiskUtilController *ad = (__bridge DiskUtilController *)context;
+	[ad ejectComplete];
+}
 @implementation DiskUtilController
 @synthesize listDelegate;
 @synthesize rootDisks, disks;
@@ -168,6 +174,21 @@ static void UnmountCallback( DADiskRef disk, DADissenterRef dissenter, void * co
 			unmount_finish_block();
 			unmount_finish_block = nil;
 		}
+	}
+}
+
+
+
+- (void)ejectDisk:(NSDictionary *)diskInfo onComplete:(dispatch_block_t)cb {
+	eject_finish_block = cb;
+	const char *BSDName = [[diskInfo valueForKey:(NSString *)kDADiskDescriptionMediaBSDNameKey] UTF8String];
+	DADiskRef disk = DADiskCreateFromBSDName(NULL, session, BSDName);
+	DADiskEject( disk, kDADiskEjectOptionDefault, EjectCallback, (__bridge void *)self);	
+}
+- (void)ejectComplete {
+	if( eject_finish_block ) {
+		eject_finish_block();
+		eject_finish_block = nil;
 	}
 }
 

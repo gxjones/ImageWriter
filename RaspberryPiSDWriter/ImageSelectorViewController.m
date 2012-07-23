@@ -52,9 +52,11 @@
 }
 
 - (void)performWrite {
-	NSString *rawDiskName = [[self diskUtilController] rawDiskName:_targetDiskInfo];
-	NSLog(@"testDrive: %@", rawDiskName );
-	//	int fd = open([rawDiskName UTF8String], );	
+#if 0
+//	NSString *rawDiskName = [[self diskUtilController] rawDiskName:_targetDiskInfo];
+#else
+	NSString *rawDiskName = @"/Users/grant/Downloads/RasPiWrite/test.bin";
+#endif
 	
 	_progressIndicator.indeterminate = FALSE;
 	_progressIndicator.minValue = 0;
@@ -78,13 +80,14 @@
 	NSFileHandle *fh = [note object];
 	NSData *d = [[note userInfo] valueForKey:NSFileHandleNotificationDataItem];
 	if( [d length] == 0 ) {
-		[_progressIndicator setDoubleValue:1.0];
+		_progressIndicator.indeterminate = TRUE;
 //		_nextButton.enabled = TRUE;
 
-#if 0
-		_writeResultViewController = [[WriteCompleteViewController alloc] initWithNibName:@"WriteCompleteViewController" bundle:nil];
-		[[(AppDelegate *)[NSApplication sharedApplication].delegate navCtl] pushViewController:_writeResultViewController];
-#endif
+		[[self diskUtilController] ejectDisk:_targetDiskInfo onComplete:^{
+			_writeResultViewController = [[WriteCompleteViewController alloc] initWithNibName:@"WriteCompleteViewController" bundle:nil];
+			[[(AppDelegate *)[NSApplication sharedApplication].delegate navCtl] pushViewController:_writeResultViewController];
+		}];
+		
 		return;
 	}
 

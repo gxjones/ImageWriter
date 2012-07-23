@@ -19,6 +19,7 @@
 	
 	uint32_t remaining_unmounts;
 	dispatch_block_t unmount_finish_block;
+	dispatch_block_t eject_finish_block;
 }
 
 @property (nonatomic,assign) id <DiskUtilControllerListDelegate> listDelegate;
@@ -32,7 +33,8 @@
 - (NSArray *)partitionsOnDisk:(NSString *)BSDName;
 - (void)unmountDisks:(NSArray *)dlist onComplete:(dispatch_block_t)b;
 - (void)unmountComplete;
+- (void)ejectDisk:(NSDictionary *)diskInfo onComplete:(dispatch_block_t)cb;
+- (void)ejectComplete;
 - (BOOL)isRootDisk:(NSDictionary *)diskInfo;
 - (NSString *)rawDiskName:(NSDictionary *)diskInfo;
-
 @end
