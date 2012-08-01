@@ -8,7 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 #import "NavigationViewController.h"
-#import "DriveSelectorViewController.h"
+#import "IntroViewController.h"
 #import "DiskUtilController.h"
 
 @interface AppDelegate : NSObject <NSApplicationDelegate> {
@@ -21,6 +21,6 @@
 @property (nonatomic,strong) NavigationViewController *navCtl;
 @property (nonatomic,strong) DiskUtilController *diskUtilController;
 
-@property (strong) DriveSelectorViewController *driveSelectorViewController;
+@property (nonatomic,strong) IntroViewController *introViewController;
 
 @end

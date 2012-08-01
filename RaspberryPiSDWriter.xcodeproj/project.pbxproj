@@ -31,10 +31,12 @@
 		933872DD15BCB52A00D12261 /* iwriter in Resources */ = {isa = PBXBuildFile; fileRef = 933872DC15BCB52A00D12261 /* iwriter */; };
 		933872E015BCB60500D12261 /* BLAuthentication.m in Sources */ = {isa = PBXBuildFile; fileRef = 933872DF15BCB5E800D12261 /* BLAuthentication.m */; };
 		933872E215BCB72E00D12261 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 933872E115BCB72E00D12261 /* Security.framework */; };
+		93A0A1F915C8D58100FB5285 /* IntroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93A0A1F715C8D58100FB5285 /* IntroViewController.m */; };
+		93A0A1FA15C8D58100FB5285 /* IntroViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93A0A1F815C8D58100FB5285 /* IntroViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		9338725F15BB550B00D12261 /* RaspberryPiSDWriter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RaspberryPiSDWriter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9338725F15BB550B00D12261 /* RaspberryPiSDWriter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = RaspberryPiSDWriter.app; path = ImageWriter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9338726315BB550B00D12261 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		9338726615BB550B00D12261 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		9338726715BB550B00D12261 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -73,6 +75,9 @@
 		933872DE15BCB5E700D12261 /* BLAuthentication.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BLAuthentication.h; sourceTree = "<group>"; };
 		933872DF15BCB5E800D12261 /* BLAuthentication.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BLAuthentication.m; sourceTree = "<group>"; };
 		933872E115BCB72E00D12261 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		93A0A1F615C8D58100FB5285 /* IntroViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntroViewController.h; sourceTree = "<group>"; };
+		93A0A1F715C8D58100FB5285 /* IntroViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntroViewController.m; sourceTree = "<group>"; };
+		93A0A1F815C8D58100FB5285 /* IntroViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IntroViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +161,9 @@
 				933872D715BC952600D12261 /* WriteCompleteViewController.xib */,
 				933872DE15BCB5E700D12261 /* BLAuthentication.h */,
 				933872DF15BCB5E800D12261 /* BLAuthentication.m */,
+				93A0A1F615C8D58100FB5285 /* IntroViewController.h */,
+				93A0A1F715C8D58100FB5285 /* IntroViewController.m */,
+				93A0A1F815C8D58100FB5285 /* IntroViewController.xib */,
 			);
 			path = RaspberryPiSDWriter;
 			sourceTree = "<group>";
@@ -235,6 +243,7 @@
 				933872D915BC952600D12261 /* WriteCompleteViewController.xib in Resources */,
 				933872DB15BC974B00D12261 /* SuccessIcon.icns in Resources */,
 				933872DD15BCB52A00D12261 /* iwriter in Resources */,
+				93A0A1FA15C8D58100FB5285 /* IntroViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,6 +264,7 @@
 				933872C215BBA5DB00D12261 /* DiskUtilController.m in Sources */,
 				933872D815BC952600D12261 /* WriteCompleteViewController.m in Sources */,
 				933872E015BCB60500D12261 /* BLAuthentication.m in Sources */,
+				93A0A1F915C8D58100FB5285 /* IntroViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,6 +386,7 @@
 				9338727F15BB550B00D12261 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

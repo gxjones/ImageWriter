@@ -15,7 +15,6 @@
 @end
 
 @implementation DriveSelectorViewController
-
 @synthesize tableView;
 @synthesize imageSelectorViewController = _imageSelectorViewController;
 @synthesize nextButton;
@@ -52,6 +51,10 @@
 	_imageSelectorViewController.targetDiskInfo = [[self diskUtilController].rootDisks objectAtIndex:row];
 	
 	[[(AppDelegate *)[NSApplication sharedApplication].delegate navCtl] pushViewController:_imageSelectorViewController];
+}
+
+- (IBAction)prev:(id)sender {
+	[[(AppDelegate *)[NSApplication sharedApplication].delegate navCtl] popViewController];
 }
 
 

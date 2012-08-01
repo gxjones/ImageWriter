@@ -17,6 +17,7 @@
 @property (weak) IBOutlet NSButton *nextButton;
 
 - (IBAction)next:(id)sender;
+- (IBAction)prev:(id)sender;
 - (DiskUtilController *)diskUtilController;
 
 @end
