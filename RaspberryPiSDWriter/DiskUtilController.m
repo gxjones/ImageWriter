@@ -97,6 +97,11 @@ static void EjectCallback( DADiskRef disk, DADissenterRef dissenter, void * cont
 		}
 	}
 	
+	if( ![[descDict valueForKey:(NSString *)kDADiskDescriptionMediaWritableKey] boolValue] ) {
+		// disk must be writable
+		return;
+	}
+	
 	NSString *bundleID = [[descDict valueForKey:@"DAMediaIcon"] valueForKey:@"CFBundleIdentifier"];
 	NSURL *bundleURL = (__bridge_transfer NSURL *)KextManagerCreateURLForBundleIdentifier( NULL, CFBridgingRetain(bundleID) );
 	if( bundleURL ) {

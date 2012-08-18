@@ -42,7 +42,7 @@
 }
 
 - (IBAction)next:(id)sender {
-	int row = [self.tableView selectedRow];
+	NSInteger row = [self.tableView selectedRow];
 	if( row < 0 ) {
 		return;
 	}
@@ -79,7 +79,7 @@
 }
 
 - (void)tableViewSelectionDidChange:(NSNotification *)notification {
-	int row = [self.tableView selectedRow];
+	NSInteger row = [self.tableView selectedRow];
 	if( row < 0 ) {
 		self.nextButton.enabled = FALSE;
 		return;

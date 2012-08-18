@@ -120,8 +120,8 @@
 	NSString *targetDeviceName = [_targetDiskInfo valueForKey:(NSString *)kDADiskDescriptionMediaNameKey];
 	
 	NSAlert *alert = [NSAlert alertWithMessageText:@"Confirm and Verify Action" defaultButton:@"Cancel" alternateButton:@"Continue" otherButton:nil informativeTextWithFormat:@"This program will write the source image \"%@\" to destination device \"%@\". Confirm this action is correct by selecting Continue.", _sourceImageView.filePath, targetDeviceName,nil];
-	int selection = [alert runModal];	
-	NSLog(@"selection = %d", selection );
+	NSInteger selection = [alert runModal];
+	NSLog(@"selection = %ld", selection );
 	if( selection != 0 ) {
 		NSLog(@"failure to confirm.");
 		_nextButton.enabled = TRUE;

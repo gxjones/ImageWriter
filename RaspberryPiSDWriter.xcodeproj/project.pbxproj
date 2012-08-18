@@ -36,7 +36,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		9338725F15BB550B00D12261 /* RaspberryPiSDWriter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = RaspberryPiSDWriter.app; path = ImageWriter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9338725F15BB550B00D12261 /* ImageWriter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageWriter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9338726315BB550B00D12261 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		9338726615BB550B00D12261 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		9338726715BB550B00D12261 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -111,7 +111,7 @@
 		9338726015BB550B00D12261 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9338725F15BB550B00D12261 /* RaspberryPiSDWriter.app */,
+				9338725F15BB550B00D12261 /* ImageWriter.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -200,7 +200,7 @@
 			);
 			name = ImageWriter;
 			productName = RaspberryPiSDWriter;
-			productReference = 9338725F15BB550B00D12261 /* RaspberryPiSDWriter.app */;
+			productReference = 9338725F15BB550B00D12261 /* ImageWriter.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -209,7 +209,7 @@
 		9338725615BB550A00D12261 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0430;
+				LastUpgradeCheck = 0440;
 			};
 			buildConfigurationList = 9338725915BB550A00D12261 /* Build configuration list for PBXProject "RaspberryPiSDWriter" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -348,6 +348,7 @@
 		9338727E15BB550B00D12261 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RaspberryPiSDWriter/RaspberryPiSDWriter-Prefix.pch";
 				INFOPLIST_FILE = "RaspberryPiSDWriter/RaspberryPiSDWriter-Info.plist";
@@ -359,6 +360,7 @@
 		9338727F15BB550B00D12261 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RaspberryPiSDWriter/RaspberryPiSDWriter-Prefix.pch";
 				INFOPLIST_FILE = "RaspberryPiSDWriter/RaspberryPiSDWriter-Info.plist";

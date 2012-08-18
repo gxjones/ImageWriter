@@ -17,7 +17,7 @@
 @interface DiskUtilController : NSObject {
 	DASessionRef session;	
 	
-	uint32_t remaining_unmounts;
+	NSInteger remaining_unmounts;
 	dispatch_block_t unmount_finish_block;
 	dispatch_block_t eject_finish_block;
 }
